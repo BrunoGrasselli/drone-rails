@@ -6,8 +6,8 @@ task :minify_drone do
   lib = `curl https://raw.github.com/andremendonca/dronejs/master/lib/drone.js`
 
   compressor = YUI::JavaScriptCompressor.new
-  lib.match /Version (\d+.\d+.\d+)/
-  version = $1
+  lib.match /Version (.*)/
+  version = $1.strip
   
   File.open("/tmp/drone.min-#{version}.js", "w") {|f| f.puts compressor.compress(lib)}
   puts "Done!"
