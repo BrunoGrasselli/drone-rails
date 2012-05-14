@@ -102,4 +102,4 @@ DEPENDENCIES
   drone-rails!
   jquery-rails
   sqlite3
-  yui-compressor
+  yui-compressor (~> 0.9.6)

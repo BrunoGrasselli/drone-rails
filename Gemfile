@@ -7,7 +7,7 @@ gemspec
 
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
-gem "yui-compressor"
+gem "yui-compressor", "~> 0.9.6"
 
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or
