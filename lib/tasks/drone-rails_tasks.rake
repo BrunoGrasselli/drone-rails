@@ -1,6 +1,5 @@
 desc "Minify the drone lib"
 task :minify_drone do
-  require "open-uri"
   require "yui/compressor"
 
   lib = `curl https://raw.github.com/andremendonca/dronejs/master/lib/drone.js`
