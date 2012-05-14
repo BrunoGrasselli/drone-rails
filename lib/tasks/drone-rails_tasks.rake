@@ -8,7 +8,8 @@ task :minify_drone do
   compressor = YUI::JavaScriptCompressor.new
   lib.match /Version (.*)/
   version = $1.strip
+  output_file = "/tmp/drone.min-#{version}.js"
   
-  File.open("/tmp/drone.min-#{version}.js", "w") {|f| f.puts compressor.compress(lib)}
-  puts "Done!"
+  File.open(output_file, "w") {|f| f.puts compressor.compress(lib)}
+  puts "#{output_file} minified!"
 end
